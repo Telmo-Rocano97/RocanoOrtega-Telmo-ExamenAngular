@@ -1,0 +1,38 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+      <mat-card class="box">
+        <mat-card-header>
+          <mat-card-title>Registrar</mat-card-title>
+        </mat-card-header>
+
+        <form [formGroup] = "form1" (submit)="registrarUsuario()"  class="example-form">
+
+          <mat-card-content>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Cédula" formControlName="cedula" minlength ="10" required="true">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="nombre" formControlName="nombre">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="apellido" formControlName="apellido" type="text">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="direccion" formControlName="direccion" type="text">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="correo" formControlName="correo" type="text">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="telefono" formControlName="telefono" type="text">
+              </mat-form-field>
+
+          </mat-card-content>
+
+          <button mat-stroked-button color="red" class="btn-block">Crear Cliente</button>
+
+        </form>
+      </mat-card>
+    </div>
